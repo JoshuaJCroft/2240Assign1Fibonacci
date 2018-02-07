@@ -47,6 +47,7 @@ public class Main {
 					System.out.println(invalidInput);
 			}
 		}
+		reader.close();
 		
 		// Run recursive Fibonacci series method. Get elapsed time. Output results.
 		startTime = System.nanoTime();
