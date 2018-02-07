@@ -99,7 +99,7 @@ public class Main {
 		return fiboAtPosRec(pos - 1) + fiboAtPosRec(pos - 2);
 	}
 	
-	// Method Name:	fiboSeriesLoop
+	// Method Name:	fiboSeriesIte
 	// Parameters:	startPos: The starting position to print within the Fibonacci series.
 	//				lastPos: The last inclusive value to print from the Fibonacci series.
 	// Behaviour: 	Prints to the console all Fibonacci numbers from the given position
@@ -112,7 +112,7 @@ public class Main {
 		}
 	}
 	
-	// Method Name:	fiboAtPosLoop
+	// Method Name:	fiboAtPosIte
 	// Parameters:	pos: The position of the integer within the Fibonacci series to return.
 	// Behaviour: 	Returns the integer at the given position of the Fibonacci Series.
 	//				Uses iteration within a loop to return the specific Fibonacci integer.
