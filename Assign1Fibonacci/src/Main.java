@@ -8,8 +8,6 @@ Description: 	This program compares the execution time of calculating and printi
 				The program accepts user input to determine the start and end positions
 				of which to sequentially print the Fibonacci series.
 				The program uses nested loops/recursion in order to print out the series in the console.
-				Because this is implemented the same for both procedures (nested), I believe the take-away 
-				of the assignment still holds true. 
 */
 import java.util.*;
 
