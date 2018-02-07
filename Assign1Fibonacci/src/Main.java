@@ -58,7 +58,7 @@ public class Main {
 		
 		// Run iterative Fibonacci series method. Get elapsed time. Output results.
 		startTime = System.nanoTime();
-		fiboSeriesLoop(startPos, endPos);
+		fiboSeriesIte(startPos, endPos);
 		endTime = System.nanoTime();
 		elapsedTimeLoop = endTime - startTime;
 		System.out.println(" > The elapsed time of nested loops is: " + ((float)elapsedTimeLoop / 1000000) + " milliseconds.");
@@ -105,10 +105,10 @@ public class Main {
 	// Behaviour: 	Prints to the console all Fibonacci numbers from the given position
 	// 				(starting at 0) to and including the ceiling position.
 	//				Uses a ForLoop to call fiboAtPosLoop, printing each integer returned.
-	public static void fiboSeriesLoop(Integer startPos, Integer lastPos) {
+	public static void fiboSeriesIte(Integer startPos, Integer lastPos) {
 		int i;
 		for(i = startPos; i <= lastPos; i++){
-			System.out.println(fiboAtPosLoop(i));
+			System.out.println(fiboAtPosIte(i));
 		}
 	}
 	
@@ -117,7 +117,7 @@ public class Main {
 	// Behaviour: 	Returns the integer at the given position of the Fibonacci Series.
 	//				Uses iteration within a loop to return the specific Fibonacci integer.
 	//				Negative positions will return 0.
-	public static int fiboAtPosLoop(Integer pos) {
+	public static int fiboAtPosIte(Integer pos) {
 		int fiboInteger = 0;
 		int currentPosSubTwo = 0;
 		int currentPosSubOne = 1;
