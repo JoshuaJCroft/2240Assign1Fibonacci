@@ -14,47 +14,54 @@ import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {
+		// Initialize variables.
 		long startTime, endTime, elapsedTimeRec, elapsedTimeLoop;
 		int startPos = 0, endPos = 0;
 		Scanner reader = new Scanner(System.in);
 		String input;
 		String invalidInput = "Your input was invalid, please try again.";
 		Boolean successful = false;
+		
 		// User input.
 		System.out.println("This program prints Fibonacci numbers given a start position and an end position.");
+		// Get start position integer. 
 		while(!successful) {
 		System.out.println("Please enter the start postition (integer): ");
 		input = reader.nextLine();
-			try {
-				startPos = Integer.parseInt(input);
-				successful = true;
+		try {	// Error checking. 
+			startPos = Integer.parseInt(input);
+			successful = true;
 			} catch(Exception e) {
 				System.out.println(invalidInput);
 			}
 		}
 		successful = false;
+		// Get end position integer.
 		while(!successful) {
 			System.out.println("Please enter the last postition (integer): ");
 			input = reader.nextLine();
-				try {
-					endPos = Integer.parseInt(input);
-					successful = true;
-				} catch(Exception e) {
+			try {	// Error checking. 
+				endPos = Integer.parseInt(input);
+				successful = true;
+			} catch(Exception e) {
 					System.out.println(invalidInput);
-				}
 			}
+		}
+		
 		// Run recursive Fibonacci series method. Get elapsed time. Output results.
 		startTime = System.nanoTime();
 		fiboSeriesRec(startPos, endPos);
 		endTime = System.nanoTime();
 		elapsedTimeRec = endTime - startTime;
 		System.out.println(" > The elapsed time of nested recursions is: " + ((float)elapsedTimeRec / 1000000) + " milliseconds.");
+		
 		// Run iterative Fibonacci series method. Get elapsed time. Output results.
 		startTime = System.nanoTime();
 		fiboSeriesLoop(startPos, endPos);
 		endTime = System.nanoTime();
 		elapsedTimeLoop = endTime - startTime;
 		System.out.println(" > The elapsed time of nested loops is: " + ((float)elapsedTimeLoop / 1000000) + " milliseconds.");
+		
 		// Compare elapsed times and output time ratio.
 		if (elapsedTimeRec > elapsedTimeLoop) {
 			System.out.println(" > The iterative method was faster than the recursive method by a factor of " + outputTimeFactor(elapsedTimeRec,elapsedTimeLoop) );
